@@ -1,0 +1,242 @@
+@font-face {
+    font-family: bebas;
+    src: url(src/fonts/BebasNeue-Regular.ttf);
+}
+
+body {
+    text-align: center;
+    background-image: url(src/image/mayon.jpg);
+    background-position: 50% 15%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-x: hidden;
+}
+
+.header, .above-header, ol, #places, #heritage, .epi {
+    font-family: bebas, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 7px 7px 3px #00000055;
+}
+
+.divider {
+    color: white;
+}
+
+.main {
+    background-color: #00000055;
+}
+
+.epi {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+
+
+figcaption {
+    color: white;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+ol {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin: auto;
+    max-width: 700px;
+    margin-top: -50px;
+}
+
+li {
+    padding: 10px;
+}
+
+.header {
+    font-size: 22em;
+    margin-top: -70px;
+    margin-bottom: -0.3em;
+    letter-spacing: 1.3rem;
+    display: block;
+}
+
+.above-header {
+    font-size: 2rem;
+    letter-spacing: 1.2em;
+    text-align: center;
+    display: flexbox;
+    padding-top: 100px;
+}
+
+.intro {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    text-shadow: 3px 3px 2px #00000055;
+    color: white;
+    margin-bottom: 2em;
+    width: 80%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    white-space: pre-line;
+}
+
+.scroll-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    text-shadow: 3px 3px 3px #00000055;
+}
+
+#places, #heritage {
+    font-size: 5rem;
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.image {
+    max-width: 800px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.img-container {
+    position: relative;
+    z-index: 2;
+}
+
+#caption {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    background-color: #222;
+    color: white;
+    max-width: 780px;
+    padding: 10px;
+    margin: auto;
+    height: 130px;
+}
+
+.arrow-body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.arrow {
+    position: relative;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-top: 5px solid #fff;
+    border-left: 5px solid #fff;
+    transform: rotate(-135deg);
+    animation: arrow-load 2s infinite;
+}
+
+.arrow:nth-child(){
+    animation: -0.1s;
+}
+
+@keyframes arrow-load {
+    0% {
+        opacity: 1;
+        transform: rotate(-135deg) translate(5px,5px);
+    }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(-135deg) translate(-1.5em, -1.5em);
+    }    
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    height: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border: 3px 0 0 3px;
+    border-color: transparent #fff transparent transparent;
+    margin-right: 7px;
+}
+
+.prev {
+    left: 0;
+    border: 3px 0 0 3px;
+    border-color: transparent #fff transparent transparent;
+    margin-left: 8px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column {
+    float: left;
+    width: 20%;
+}
+
+.demo {
+    opacity: 0.2;
+}
+
+.active, .demo:hover {
+    opacity: 1;
+}
+
+.heritage-subtext {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    text-shadow: 3px 3px 2px #00000055;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    margin-top: -1.5em;
+    margin-bottom: 4em;
+    width: 80%;
+    max-width: 650px;
+    display: inline-block;
+}
